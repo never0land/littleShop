@@ -1,0 +1,41 @@
+<view>
+  <search_input></search_input>
+  <!-- swiper -->
+  <view>
+    <swiper autoplay='true' circular='true' indicator-dots='true' >
+      <swiper-item wx:for="{{index_swiper}}" wx:key="item.id" >
+        <navigator url='{{item.url}}' style="height:70vw">
+          <image src='{{item.image}}' mode="widthFix" style="background-color:#666;"/>
+        </navigator>
+      </swiper-item>
+    </swiper>
+    <!-- swiper end -->
+    <!-- icons start -->
+  <view class="index_cate">
+        <navigator url='{{item.url}}' wx:for="{{index_icons}}" wx:key="{{item.id}}">
+          <image src='{{item.image}}' mode="widthFix"></image>
+        </navigator>
+    </view>
+  </view>
+  <!-- icons end -->
+  <!-- floor start -->
+<view class="index_floor">
+  <view class="floor_group" wx:for="{{floors}}"
+  wx:for-item="item1"
+  wx:for-index="index1"
+  wx:key="floor_title">
+    <view class="floor_title">
+      <text>{{item1.title}} </text> 
+    </view>
+    <view class="floor_list">
+      <navigator class="" target="" url="{{item2.url}}" hover-class="navigator-hover" open-type="navigate"
+      wx:for="{{item1.child_data}}"
+      wx:for-item="item2"
+      wx:for-index="index2"
+      wx:key="item2.cid">
+        <image src="{{item2.picture}}" mode="{{index2===0?'widthFix':'scaleToFill'}}"></image>
+      </navigator>
+    </view>
+  </view>
+</view>
+</view>

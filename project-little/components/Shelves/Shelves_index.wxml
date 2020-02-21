@@ -1,0 +1,5 @@
+<view>
+<view style='position:relative;background-color:#eee'>
+<view style="position:absoulte;background-color:#f90;width:33.33%;"></view>
+</view>
+</view>

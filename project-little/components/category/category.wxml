@@ -1,0 +1,21 @@
+<view>
+<search_input></search_input>
+<view style="display:flex">
+<scroll-view class="lefts" scroll-y="true" style="background-color:#eee;width:30%;">
+<view style="align-items:center">
+<view wx:for="{{lefts}}" wx:key="{{item.index}}" style="flex-direction:row-reverse;padding:20rpx;margin:10rpx;height:80rpx;font-size:26rpx;">{{item}}</view>
+</view>
+</scroll-view>
+<scroll-view class="rights" style="width:70%;" scroll-y="true">
+<view wx:for="{{categorys}}" style="margin-bottom:15px;margin-top:15px">
+<view class="titles" style="text-align:center;padding:20rpx;font-size:32rpx;font-weight:bold">{{item.name}}</view>
+<view wx:for="{{item.child_name}}" style="width:30%;display:inline-flex;padding:20rpx;margin:20rpx;">
+<navigator>
+<image src="{{item.jpg}}" alt="服务器它老人家死了" style="width:160rpx;height:130rpx;background-color:#eee;"></image>
+<view style="text-align:center;padding:20rpx;">{{item.titles}}</view>
+</navigator>
+</view>
+</view>
+</scroll-view>
+</view>
+</view>

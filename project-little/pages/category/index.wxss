@@ -1,0 +1,58 @@
+age{
+  height:100%;
+}
+.cates{
+  height:100%;
+}
+.cates_container{
+  height: calc(100vh-90rpx);
+  display:flex;
+}
+.left_menu{
+  flex:2;
+  /*作为flex的子项，会自动继承父元素的高度*/
+}
+.right_content{
+  flex:5;
+}
+.goods_group{
+  margin-bottom:50rpx;
+}
+.goods_title{
+  height:80rpx;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  /*文字水平，垂直居中*/
+}
+.active{
+  color:#f90;
+  border-left:5rpx solid currentColor;
+
+}
+.goods_list{
+  display:flex;
+  flex-wrap: wrap;
+}
+.menu_item{
+  height:160rpx;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size:30rpx;
+}
+.goods_name{
+
+}
+.goods_list>navigator{
+  width:33.33%;
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+.delimiter{
+  color:#ccc;
+  padding:0 10rpx;
+}
+image{
+  width:50%;
+}

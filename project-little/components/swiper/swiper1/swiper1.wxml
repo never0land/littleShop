@@ -1,0 +1,16 @@
+<view>
+<swiper>
+<swiper-item wx:for="{{index_swiper}}">
+<navigator url='javascript:;'>
+<image src='{{}}'></image>
+</navigator>
+</swiper-item>
+</swiper>
+
+
+
+
+
+
+
+</view>

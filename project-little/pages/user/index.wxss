@@ -1,0 +1,141 @@
+page{
+    background-color: #edece8;
+}
+.user_info_wrap{
+    height:50vh;
+    background-color: #f90;
+    overflow: hidden;
+    position: relative;
+}
+.user_bg{
+    height:55vh;
+    filter:blur(330rpx);
+    /*c3高斯模糊*/
+}
+.user_img_wrap{
+    position: relative;
+}
+.user_info{
+    position: absolute;
+    left:50%;
+    transform: translatex(-50%);
+    top:20%;
+    text-align:center;
+}
+.user_icon{
+    width:190rpx;
+    height:190rpx;
+    border-radius: 50%;
+    animation:around 10s ;
+
+}
+.user_name{
+    color:#fff;
+    margin-top:40rpx;
+    font-weight:600;
+    width:300rpx;
+    font-size:40rpx;
+}
+.user_btn{
+    position: absolute;
+    left:50%;
+    top:40%;
+    transform: translateX(-50%);
+    font-size:38rpx;
+    border-radius:10rpx;
+    border:1rpx solid greenyellow;
+    padding:30rpx;
+    font-weight:bold;
+    width:200rpx;
+    text-align:center;
+    color: rgb(206, 245, 147)
+}
+.user_content{
+    position: relative;
+}
+.user_main{
+    color:#666;
+    padding-bottom: 100rpx;
+    position: absolute;
+    width:90%;
+    left:50%;
+    transform: translateX(-50%);
+    top:-40rpx;
+}
+.history_warp{
+    background-color: #fff;
+    display:flex;
+    border-radius: 12rpx;
+}
+.history_warp navigator{
+    flex:1;
+    text-align:center;
+    padding:10rpx 0;
+}
+.his_num{
+    color:red;
+}
+.his_name{
+
+}
+.order_content{
+    display:flex;
+}
+.iconfont{
+    color:#f90;
+    font-size: 50rpx;
+}
+.order_content navigator{
+    flex:1;
+    text-align:center;
+    padding:15rpx 0;
+}
+.orders_wrap{
+    background-color:#fff;
+    margin-top:30rpx;
+    border-radius: 19rpx;
+   /* position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    top:570rpx;*/
+
+}
+.orders_title{
+    padding:20rpx;
+    border-bottom:1rpx solid #ccc;
+}
+.address_wrap{
+   /* margin-top:30rpx;*/
+    background-color: #fff;
+    padding: 20rpx;
+    border-bottom:1rpx solid #ccc;
+}
+.app_info_wrap{
+    border-radius: 33rpx;
+    margin-top:30rpx;
+    background-color: #fff;
+    color:#666;
+    border-radius: 35rpx;
+  /*  position: absolute;
+    width:90%;
+    left:50%;
+    transform: translateX(-50%);
+    top:730rpx;*/
+}
+.app_info_item{
+    padding: 20rpx;
+    border-bottom:1rpx solid #ccc;
+}
+.app_info_contact{
+    display: flex;
+    justify-content: space-between;
+}
+.recommend_wrap{
+    /*margin-top:30rpx;*/
+    background-color:#fff;
+    padding:20rpx;
+}
+@keyframes around{
+    from{transform: rotate(0deg) infinite;}
+			to{transform: rotate(360deg);}
+}

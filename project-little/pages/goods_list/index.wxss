@@ -1,0 +1,35 @@
+/* pages/goods_list/goods_list.wxss */
+.first_tab_{}
+.goods_item{
+    display:flex;
+    border-bottom: 2rpx solid #ccc;
+    padding:15rpx;
+}
+.goods_img_wrap{
+    flex:2;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+   
+}
+.goods_info_wrap{
+    flex:3;
+    display:flex;
+    flex-direction: column;
+    /*更改主轴方向*/
+    justify-content: space-around;
+}
+.goods_name{
+    display:-webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    /*第几行出现字符串缩写，那么就写几*/
+}
+.goods_price{
+    color:#f90;
+    font-size:32rpx;
+}
+.goods_img_wrap > image{
+    width:90%;
+}

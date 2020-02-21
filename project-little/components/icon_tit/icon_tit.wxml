@@ -1,0 +1,6 @@
+  <view style="display:inline-flex">
+    <navigator url=""  open-type="navigate" wx:for="{{iconslist}}" wx:key="id" style="margin-left:11%;">
+      <image style="width:100rpx;height:100rpx;margin:10rpx;"src="{{item.imglist}}" mode="aspectFit|aspectFill|widthFix" lazy-load="true" binderror="" bindload="" />
+    </navigator>
+  </view>
+

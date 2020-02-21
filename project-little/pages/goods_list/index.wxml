@@ -1,0 +1,47 @@
+<search_input></search_input>
+<tab tabs="{{tabs}}" bindtabsItemChang="handleTabsItemChange">
+    <block wx:if="{{tabs[0].isActive}}">
+       <view class="first_tab">
+           <navigator class="goods_item" wx:for="{{goodsList}}" url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+               <view class="goods_img_wrap">
+                   <image class="" src="{{item.picture?item.picture:'http://www.sevensumer.com/public/server/swiper/swiper1.jpg'}}" mode="widthFix" lazy-load="false" binderror="" bindload="">
+                   </image>
+                   <!--不排除有些人想不开，所以图片什么鬼的，最好先判断再加载-->
+               </view>
+               <view class="goods_info_wrap">
+                        <view class="goods_name">{{item.goods_name}}</view>
+                        <view class="goods_price">售价:￥{{item.prince}}</view>
+               </view>
+           </navigator>  
+       </view> 
+    </block>
+    <block wx:elif="{{tabs[1].isActive}}">
+           <view class="first_tab">
+           <navigator class="goods_item" wx:for="{{goodsList}}" url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+               <view class="goods_img_wrap">
+                   <image class="" src="{{item.picture?item.picture:'http://www.sevensumer.com/public/server/swiper/swiper1.jpg'}}" mode="widthFix" lazy-load="false" binderror="" bindload="">
+                   </image>
+                   <!--不排除有些人想不开，所以图片什么鬼的，最好先判断再加载-->
+               </view>
+               <view class="goods_info_wrap">
+                        <view class="goods_name">{{item.goods_name}}</view>
+                        <view class="goods_price">售价:￥{{item.prince}}</view>
+               </view>
+           </navigator>  
+       </view> 
+    </block>
+    <block wx:elif="{{tabs[2].isActive}}">       <view class="first_tab">
+           <navigator class="goods_item" wx:for="{{goodsList}}" url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+               <view class="goods_img_wrap">
+                   <image class="" src="{{item.picture?item.picture:'http://www.sevensumer.com/public/server/swiper/swiper1.jpg'}}" mode="widthFix" lazy-load="false" binderror="" bindload="">
+                   </image>
+                   <!--不排除有些人想不开，所以图片什么鬼的，最好先判断再加载-->
+               </view>
+               <view class="goods_info_wrap">
+                        <view class="goods_name">{{item.goods_name}}</view>
+                        <view class="goods_price">售价:￥{{item.prince}}</view>
+               </view>
+           </navigator>  
+       </view> </block>
+</tab>
+<!--bind了自定义点击事件，同时进行监听-->

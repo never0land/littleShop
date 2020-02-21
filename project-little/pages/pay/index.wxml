@@ -1,0 +1,46 @@
+<!-- 收货地址 -->
+<view class="revice_address_row">
+  <!-- 判断缓存里面有没有地址，没有地址，那么现实这个 -->
+  <view class="address_btn" wx:if="{{!address.userName}}">
+    <button bindtap="handleChooseAddress" type="primary" plain="{{true}}">获取收货地址</button>
+  </view>
+  <!-- 如果有地址，那么显示地址 对象的布尔类型不是真就是假，所以要往后做，尽量指定对象哪个属性 -->
+  <view wx:else class="user_info_row">
+    <view class="user_info">
+      <view>{{address.userName}}</view>
+      <view>{{address.all}}</view>
+    </view>
+    <view class="user_phone">{{address.telNumber}}</view>
+  </view>
+</view>
+<!-- 购物车内容 -->
+<view class="cart_content">
+  <view class="cart_title">购物车</view>
+</view>
+<view class="cart_main">
+  <view class="cart_item" wx:for="{{cart}}" wx:key="goods_id">
+    <navigator class="cart_img_wrap">
+      <image src="{{item.goods_big_logo}}" mode="widthFix"></image>
+    </navigator>
+    <view class="cart_info_wrap">
+      <view class="goods_name">{{item.goods_name}}</view>
+      <view class="goods_price_wrap">
+        <view class="goods_price">{{item.goods_price}}</view>
+        <view class="cart_num_tool">
+          <view class="goods_num">*{{item.num}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 购物车底部 -->
+<view class="footer_tool">
+  <view class="total_price_wrap">
+    <view class="total_price">
+      合计：
+      <text class="total_price_text">￥{{total_price}}</text>
+    </view>
+    <view>包含运费</view>
+  </view>
+  <!--<view class="order_pay_wrap" bindtap="handleOrderPay">支付{{total_num}}</view>-->
+</view>

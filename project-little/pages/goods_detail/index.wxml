@@ -1,0 +1,51 @@
+<view class="detail_swiper">
+  <swiper autoplay="{{true}}" circular="{{true}}" indicator-dots="{{true}}">
+    <swiper-item data-url="{{item.pice_big}}" bindtap="handlePrevewImage" class="" wx:for="{{ goods_obj.pics}}" wx:key="pices_id">
+      <navigator>
+        <image src="{{item.pice_big}}" mode="widthFix"></image>
+      </navigator>
+    </swiper-item>
+  </swiper>
+</view>
+<view class="goods_price">￥{{goods_obj.goods_price}}</view>
+<view class="goods_name_row">
+  <view class="goods_name">{{goods_obj.goods_name}}</view>
+  <view class="goods_collect" bindtap="handleCollect">
+    <image src="{{isCollect?p1:p2 }}" style="width:60rpx;height:60rpx;padding:5rpx 0;"></image>
+    <view class="collect_text">收藏</view>
+  </view>
+</view>
+<view class="goods_info">
+  <view class="goods_info_title">图文详情</view>
+  <view class="goods_info_content">
+    <rich-text nodes="{{goods_obj.goods_introduce}}"></rich-text>
+  </view>
+</view>
+<view class="btm_tool">
+  <view class="tool_item">
+    <view class="iconfont">
+    <image src="../../icons/lianxikefu.png" style="height:38rpx;width:38rpx "></image>
+    </view>
+    <view>联系客服</view>
+    <button open-type="contact"></button>
+  </view>
+  <view class="tool_item">
+    <view class="iconfont">
+      <image src="../../icons/fenxiang.png" style="height:38rpx;width:38rpx "></image>
+    </view>
+    <view>分享</view>
+    <button open-type="share"></button>
+  </view>
+  <navigator open-type="switchTab" url="/pages/cart/index" class="tool_item">
+    <view class="iconfont">
+      <image src="../../icons/gouwuche.png" style="height:38rpx;width:38rpx "></image>
+    </view>
+    <view>购物车</view>
+  </navigator>
+  <view class="tool_item btn_cart" bindtap="handlecartAdd">加入购物车</view>
+  <view class="tool_item btn_buy">
+  <navigator  url="/pages/pay/index?goods_name={{goods_obj.goods_name}}&goods_price={{goods_obj.goods_price}}&goods_big_logo={{goods_obj.a.goods_big_logo}}&goods_id={{goods_obj.a.goods_id}}" >
+    立即购买
+  </navigator>
+  </view>
+</view>

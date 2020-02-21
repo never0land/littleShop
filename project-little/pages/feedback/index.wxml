@@ -1,0 +1,35 @@
+<tab tabs="{{tabs}}" bindtabsItemChang="handleTabsItemChange">
+  <view class="fb_main">
+    <view class="fb_title">建议种类</view>
+    <view class="fb_tips">
+      <text>功能建议</text>
+      <text>购买问题</text>
+      <text>性能</text>
+      <text>其他</text>
+    </view>
+    <view class="fb_content">
+      <textarea value="{{textval}}"
+      bindinput="handletextinput"
+      placeholder="请描述一下您的问题"></textarea>
+      <view class="fb_tool">
+        <button bindtap="handleChooseImg">+</button>
+        <view class="up_img_item"
+        wx:for="{{chooseImages}}"
+        wx:key="*this"
+        bindtap="handleRemoveImg"
+        data-index="{{index}}"
+        >
+        <!--data-index把index传了进来-->
+        <!--当数组形式只是一些普通数组，那么key不写就算了，写一定得是*this,强制规定，没有为什么-->
+          <upimage src="{{item}}"></upimage>
+        </view>
+      </view>
+    </view>
+    <view class="form_btn_wrap">
+      <button type="warn" bindtap="handleformsubmit">
+        <icon class="" type="success_no_circle" color="white" size="12"></icon>
+        提交
+      </button>
+    </view>
+  </view>
+</tab>
